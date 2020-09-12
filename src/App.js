@@ -1,8 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import LikesButton from './components/LikesButton'
-import DigitalClock from './components/DigitalClock'
+import CommentBox from './components/CommentBox'
 
 function App() {
     return (
@@ -12,9 +11,9 @@ function App() {
               <p>
                   Edit <code>src/App.js</code> and save to reload.
               </p>
-              <DigitalClock></DigitalClock>
-              <LikesButton></LikesButton>
           </header>
+
+          <CommentBox></CommentBox>
       </div>
     )
 }
