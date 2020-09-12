@@ -1,8 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Welcome from './welcome'
-import NameCard from './components/NameCard'
+import LikesButton from './components/LikesButton'
 
 function App() {
     return (
@@ -12,18 +11,9 @@ function App() {
               <p>
                   Edit <code>src/App.js</code> and save to reload.
               </p>
-              <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                  hello world
-              </a>
+
+              <LikesButton></LikesButton>
           </header>
-          <Welcome/>
-          <NameCard name='viking' number={ 123123 } isHuman={ true }
-                    tags={ ['react', '喜欢睡觉', '西瓜'] }/>
       </div>
     )
 }
