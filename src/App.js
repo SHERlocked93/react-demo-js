@@ -1,37 +1,58 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import CommentBox from './components/CommentBox'
-import CommentList from './components/CommentList'
+
+import ThemeContext from './theme-context'
+import ThemedBar from './components/ThemedBar'
+
+/* 主题配置 */
+const themes = {
+    light: {
+        classnames: 'btn btn-primary',
+        bgColor: '#eee',
+        color: '#000'
+    },
+    dark: {
+        classnames: 'btn btn-light',
+        bgColor: '#222',
+        color: '#fff'
+    }
+}
+
 
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            comments: ['this is my comment list']
+            theme: 'light'
         }
     }
 
-    addComment(comment) {
-        this.setState({
-            comments: [...this.state.comments, comment]
-        })
+    changeTheme(theme) {
+        this.setState({ theme })
     }
 
     render() {
-        const { comments } = this.state
         return (
-          <div className="App">
-              <header className="App-header">
-                  <img src={ logo } className="App-logo" alt="logo"/>
-                  <p>
-                      Edit <code>src/App.js</code> and save to reload.
-                  </p>
-              </header>
-              <CommentList comments={ comments }></CommentList>
-              <CommentBox commentsLength={ comments.length }
-                          onAddComment={ comment => this.addComment(comment) }></CommentBox>
-          </div>
+          <ThemeContext.Provider value={ themes[this.state.theme] }>
+              <div className="App">
+                  <header className="App-header">
+                      <img src={ logo } className="App-logo" alt="logo"/>
+                      <p>
+                          Edit <code>src/App.js</code> and save to reload.
+                      </p>
+
+                      <a href='#theme-switcher' className='btn btn-light'
+                         onClick={ () => this.changeTheme('light') }>浅色主题</a>
+                      <a href='#theme-switcher' className='btn btn-secondary'
+                         onClick={ () => this.changeTheme('dark') }>深色主题</a>
+                  </header>
+
+                  <ThemedBar></ThemedBar>
+
+              </div>
+          </ThemeContext.Provider>
+
         )
     }
 }
