@@ -10,8 +10,9 @@ class CommentBox extends Component {
      * @param ev
      */
     handleSubmit(ev) {
-        console.log(this.textInput.value)
+        this.props.onAddComment(this.textInput.value)
         ev.preventDefault()
+        this.textInput.value = ''
     }
 
     render() {
@@ -25,6 +26,7 @@ class CommentBox extends Component {
                              ref={ textInput => this.textInput = textInput }/>
                   </div>
                   <button type='submit' className='btn btn-primary'>留言</button>
+                  <p>已有{ this.props.commentsLength }条评论</p>
               </form>
           </div>
         )
