@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import logo from '../logo.svg'
-// import { LIST_VIEW, CHART_VIEW, TYPE_INCOME, TYPE_OUTCOME, Colors } from '../utility'
+import { LIST_VIEW, CHART_VIEW, TYPE_INCOME, TYPE_OUTCOME, Colors } from '../utility'
 
 import PriceList from '../components/PriceList'
-// import ViewTab from '../components/ViewTab'
+import ViewTab from '../components/ViewTab'
 // import CreateBtn from '../components/CreateBtn'
 // import MonthPicker from '../components/MonthPicker'
 // import TotalPrice from '../components/TotalPrice'
@@ -16,7 +16,9 @@ const items = [
 class Home extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            activeTab: LIST_VIEW
+        }
     }
 
     render() {
@@ -28,6 +30,7 @@ class Home extends Component {
         //         totalIncom += item.price
         //     }
         // })
+        const { activeTab } = this.state
 
         return (
           <div>
@@ -35,17 +38,18 @@ class Home extends Component {
                   <header className="App-header">
                       <img src={ logo } className="App-logo" alt="logo"/>
                       <div className='row'>
-                          {/*<div className='col'>*/ }
-                          {/*    <MonthPicker year={ 2020 }*/ }
-                          {/*                 month={ 8 }*/ }
-                          {/*                 onChange={ () => {} }/>*/ }
-                          {/*</div>*/ }
+                          {/*<div className='col'>
+                          {/*    <MonthPicker year={ 2020 }
+                          {/*                 month={ 8 }
+                          {/*                 onChange={ () => {} }/>
+                          {/*</div>
                           {/*<div className='col'>*/ }
                           {/*    <TotalPrice income={ totalIncom }*/ }
                           {/*                outcome={ totalOutcom }/>*/ }
                           {/*</div>*/ }
                       </div>
                   </header>
+                  <ViewTab activeTab={ activeTab } onTabChange={ activeTab => this.setState({ activeTab }) }/>
                   <PriceList items={ items }
                              onModifyItem={ item => console.log('编辑：', item) }
                              onDeleteItem={ item => console.log('删除：', item) }/>
