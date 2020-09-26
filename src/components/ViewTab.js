@@ -17,6 +17,7 @@ const ViewTab = ({ activeTab, onTabChange }) => {
                      onTabChange(LIST_VIEW)
                  } }>
                   <ion-icon name="list-outline"
+                            className='rounded-circle mr-2'
                             style={ { fontSize: '20px', verticalAlign: 'text-bottom' } }/>
                   列表模式</a>
           </li>
@@ -27,6 +28,7 @@ const ViewTab = ({ activeTab, onTabChange }) => {
                      onTabChange(CHART_VIEW)
                  } }>
                   <ion-icon name="pie-chart-outline"
+                            className='rounded-circle mr-2'
                             style={ { fontSize: '20px', verticalAlign: 'text-bottom' } }/>
                   图表模式</a>
           </li>
