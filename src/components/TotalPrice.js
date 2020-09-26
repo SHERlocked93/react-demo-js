@@ -6,9 +6,9 @@ class TotalPrice extends Component {
         const { income, outcome } = this.props
         return (
           <div>
-              <div className='col'>
-                  <div className='row'>总收入 { income }</div>
-                  <div className='row'>总支出 { outcome }</div>
+              <div className='row'>
+                  <div className='col income'>总收入 <span>{ income }</span></div>
+                  <div className='col outcome'>总支出 <span>{ outcome }</span></div>
               </div>
           </div>
         )
