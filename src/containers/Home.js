@@ -8,12 +8,12 @@ import CreateBtn from '../components/CreateBtn'
 import MonthPicker from '../components/MonthPicker'
 import TotalPrice from '../components/TotalPrice'
 
-const catagorys = {
+export const catagorys = {
     1: { id: 1, name: '旅行', type: TYPE_OUTCOME, iconName: 'airplane-outline' },
     2: { id: 2, name: '吃饭', type: TYPE_OUTCOME, iconName: 'pizza-outline' },
     3: { id: 3, name: '收入', type: TYPE_INCOME, iconName: 'card-outline' }
 }
-const items = [
+export const items = [
     { id: 1, price: 100, title: '去云南旅游', date: '2020-08-02', cid: 1 },
     { id: 2, price: 300, title: '下馆子', date: '2020-09-02', cid: 2 },
     { id: 3, price: 700, title: '理财收入', date: '2020-10-02', cid: 3 }
