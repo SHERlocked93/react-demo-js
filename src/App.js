@@ -8,6 +8,12 @@ function App() {
     return (
       <Router>
           <div className="App">
+              <ul>
+                  <Link to='/'>Home</Link> 、
+                  <Link to='/create'>Create</Link> 、
+                  <Link to='/edit/11'>edit</Link>
+              </ul>
+
               <Route path='/' exact component={ Home }></Route>
               <Route path='/create' component={ Create }></Route>
               <Route path='/edit/:id' component={ Create }></Route>
