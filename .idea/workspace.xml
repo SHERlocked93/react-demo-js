@@ -38,6 +38,82 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
+  <component name="RunManager">
+    <configuration name="test number" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/example.test.js" />
+      <test-names>
+        <test-name value="test number" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test obj" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/example.test.js" />
+      <test-names>
+        <test-name value="test obj" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test pricelist components" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/__test__/PriceList.test.js" />
+      <test-names>
+        <test-name value="test pricelist components" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test to be true or false" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/example.test.js" />
+      <test-names>
+        <test-name value="test to be true or false" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test totalprice" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/__test__/TotalPrice.test.js" />
+      <test-names>
+        <test-name value="test totalprice" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.test totalprice" />
+        <item itemvalue="Jest.test to be true or false" />
+        <item itemvalue="Jest.test pricelist components" />
+        <item itemvalue="Jest.test obj" />
+        <item itemvalue="Jest.test number" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
