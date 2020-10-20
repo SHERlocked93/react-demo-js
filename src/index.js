@@ -1,25 +1,22 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import axios from 'axios'
-import { Button } from 'antd-mobile'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import store from './store/data'
+import App from './view/App'
 
-class App extends Component {
-    async componentDidMount() {
-        let page = 3
-        const url = `http://localhost:9038/api/rtimu/?page=${ page }`
-        const res = await axios.get(url)
-        console.log(res.data)
-    }
+import './assets/css/style.css'
 
-    render() {
-        return (
-          <Button>
-              start1
-          </Button>
-        )
-    }
-}
+import Dati from './view/Dati'
+import Result from './view/Result'
+ReactDOM.render(
+    <Provider store={store}>
+        <Router>
+            <Route path="/" exact component={App}></Route>
+            <Route path="/dati" component={Dati}></Route>
+            <Route path="/result" component={Result}></Route>
+        </Router>
+    </Provider>,
+    document.querySelector("#root")
+)
 
-export default App
-
-ReactDOM.render(<App/>, document.getElementById('root'))
