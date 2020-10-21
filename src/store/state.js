@@ -1,6 +1,5 @@
-let state = {
-    timuList:[],
+const state = {
+    timuList: []
 }
 
-
-export default state 
+export default state

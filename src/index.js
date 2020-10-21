@@ -1,22 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux'
-import {BrowserRouter as Router,Route} from 'react-router-dom';
-import store from './store/data'
+import ReactDom from 'react-dom'
+import React from 'react'
+import store from './store/index'
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import './assets/css/index.css'
+
 import App from './view/App'
-
-import './assets/css/style.css'
-
 import Dati from './view/Dati'
 import Result from './view/Result'
-ReactDOM.render(
-    <Provider store={store}>
-        <Router>
-            <Route path="/" exact component={ App }/>
-            <Route path="/dati" component={ Dati }/>
-            <Route path="/result" component={ Result }/>
-        </Router>
-    </Provider>,
-    document.querySelector("#root")
-)
 
+ReactDom.render(
+  <Provider store={ store }>
+      <Router>
+          <Route path='/' component={ App } exact/>
+          <Route path='/dati' component={ Dati }/>
+          <Route path='/result' component={ Result }/>
+      </Router>
+  </Provider>
+  , document.getElementById('root'))

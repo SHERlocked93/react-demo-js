@@ -3,6 +3,8 @@ const app = express()
 const sqlQuery = require('./sql')
 
 app.get('/', (req, res) => {
+    res.append('Access-Control-Allow-Origin', '*')
+    res.append('Access-Control-Allow-Content-Type', '*')  // 跨域
     res.send('答题服务器')
 })
 
