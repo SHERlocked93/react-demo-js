@@ -12,7 +12,7 @@ import Result from './view/Result'
 ReactDom.render(
   <Provider store={ store }>
       <Router>
-          <Route path='/' component={ App } exact/>
+          <Route path='/' component={ App }/>
           <Route path='/dati' component={ Dati }/>
           <Route path='/result' component={ Result }/>
       </Router>

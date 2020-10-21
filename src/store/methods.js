@@ -1,5 +1,8 @@
+// 设置题目列表
+const SetTimuList = 'SetTimuList'
+
 const methods = {
-    setTimuList: (state, action) => {
+    [SetTimuList]: (state, action) => {
         return Object.assign({}, state, {
             timuList: action.timuList
         })
@@ -7,3 +10,4 @@ const methods = {
 }
 
 export default methods
+export { SetTimuList }

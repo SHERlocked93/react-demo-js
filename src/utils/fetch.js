@@ -20,8 +20,8 @@ service.interceptors.request.use(
 
 service.interceptors.response.use(
   response => {
-      console.log('返回数据Success：', response)
-      return response
+      // console.log('返回数据Success：', response)
+      return response.data
   },
   err => {
       console.error('返回数据Error:  ', err)

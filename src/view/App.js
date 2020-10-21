@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from 'antd-mobile'
+import * as Api from '../utils/apis'
+import store from '../store'
 
 class App extends Component {
     goDati = () => {

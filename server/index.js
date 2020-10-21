@@ -14,6 +14,7 @@ app.get('/api/rtimu/', async (req, res) => {
     const page = req.query.page ? req.query.page : 2
     const strSql = `select * from quizzes limit ${ page * 10 }, 10;`
     const result = await sqlQuery(strSql)
+    console.log({ strSql })
     res.json(Array.from(result))
 })
 
