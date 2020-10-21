@@ -3,7 +3,7 @@ import { SetTimuList } from '../store/methods'
 import { getTimuList } from '../store/asyncMethods'
 import store from '../store'
 import { connect } from 'react-redux'
-import { List, Radio, WhiteSpace, Button } from 'antd-mobile'
+import { List, Radio, WhiteSpace, Button, WingBlank } from 'antd-mobile'
 
 const mapStateToProps = (state) => ({ ...state })
 const mapDispatchToProps = dispatch => {
@@ -72,7 +72,11 @@ class Dati extends Component {
               </List>
 
               <WhiteSpace/>
-              <Button type="primary" inline style={ { display: checkedValue ? 'inline-block' : 'none' } } onClick={ this.checkAnswer }>确认</Button>
+              <WingBlank size='lg'>
+                  <Button type="primary"
+                          style={ { display: checkedValue ? 'block' : 'none' } }
+                          onClick={ this.checkAnswer }>确认</Button>
+              </WingBlank>
           </div>
         )
     }

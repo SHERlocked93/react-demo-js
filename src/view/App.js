@@ -15,7 +15,7 @@ class App extends Component {
         return (
           <div>
               <Button onClick={ this.goDati }>随机答题</Button>
-              <Button onClick={ this.goResult }>Result</Button>
+              {/*<Button onClick={ this.goResult }>Result</Button>*/ }
           </div>
         )
     }

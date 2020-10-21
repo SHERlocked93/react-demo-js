@@ -7,14 +7,14 @@ import './assets/css/index.css'
 
 import App from './view/App'
 import Dati from './view/Dati'
-import Result from './view/Result'
+// import Result from './view/Result'
 
 ReactDom.render(
   <Provider store={ store }>
       <Router>
-          <Route path='/' component={ App }/>
+          <Route path='/' component={ App } exact/>
           <Route path='/dati' component={ Dati }/>
-          <Route path='/result' component={ Result }/>
+          {/*<Route path='/result' component={ Result }/>*/ }
       </Router>
   </Provider>
   , document.getElementById('root'))
