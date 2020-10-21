@@ -6,7 +6,6 @@ let fns = {
         let httpUrl = `${host}/api/rtimu/?page=${page}`
         let res = await axios.get(httpUrl);
         return res.data
-        //console.log(res.dat)
     }
 }
 

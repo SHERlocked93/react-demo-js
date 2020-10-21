@@ -12,9 +12,9 @@ import Result from './view/Result'
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <Route path="/" exact component={App}></Route>
-            <Route path="/dati" component={Dati}></Route>
-            <Route path="/result" component={Result}></Route>
+            <Route path="/" exact component={ App }/>
+            <Route path="/dati" component={ Dati }/>
+            <Route path="/result" component={ Result }/>
         </Router>
     </Provider>,
     document.querySelector("#root")
